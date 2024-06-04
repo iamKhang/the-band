@@ -18,13 +18,13 @@
             <a href="">Home</a>
           </li>
           <li class="nav-item">
-            <a href="">Band</a>
+            <a href="#about">Band</a>
           </li>
           <li class="nav-item">
-            <a href="">Tour</a>
+            <a href="#tours">Tour</a>
           </li>
           <li class="nav-item">
-            <a href="">Contact</a>
+            <a href="#contact">Contact</a>
           </li>
           <li class="nav-item">
             <a href="#"
@@ -55,7 +55,7 @@
       </div>
 
       <div id="content">
-        <div class="content-section">
+        <div id="about" class="content-section">
           <h2 class="section-heading">The Band</h2>
           <p class="section-description">We love music</p>
 
@@ -73,23 +73,23 @@
             ea commodo consequat.
           </p>
 
-          <div class="band-team">
-            <div class="band-member">
+          <div class="band-team row clearfix">
+            <div class="band-member col col-3">
               <p class="member-name">Jack 5 củ</p>
               <img src="./assets/imgs/j97.jpg" alt="" class="member-img" />
             </div>
-            <div class="band-member">
+            <div class="band-member col col-3">
               <p class="member-name">Võ sĩ Cecau</p>
               <img src="./assets/imgs/decau.png" alt="" class="member-img" />
             </div>
-            <div class="band-member">
+            <div class="band-member col col-3">
               <p class="member-name">Đạt G</p>
               <img src="./assets/imgs/datg.jpg" alt="" class="member-img" />
             </div>
           </div>
         </div>
 
-        <div class="section-tour">
+        <div id="tours" class="section-tour">
           <div class="content-section">
             <h2 class="section-heading text-white">tour dates</h2>
             <p class="section-description text-white">
@@ -102,8 +102,8 @@
               <li>November <spand class="quantity">3</spand></li>
             </ul>
 
-            <div class="place-list">
-              <div class="place-item">
+            <div class="place-list clearfix row">
+              <div class="place-item col col-3">
                 <img
                   class="place-img"
                   src="/assets/imgs/tphcm.jpg"
@@ -130,7 +130,7 @@
                 </div>
               </div>
 
-              <div class="place-item">
+              <div class="place-item col col-3">
                 <img
                   class="place-img"
                   src="/assets/imgs/danang.jpg"
@@ -157,7 +157,7 @@
                 </div>
               </div>
 
-              <div class="place-item">
+              <div class="place-item col col-3">
                 <img
                   class="place-img"
                   src="/assets/imgs/hanoi.jpg"
@@ -187,13 +187,84 @@
           </div>
         </div>
 
-        <div class="content-section">
+        <div id="contact" class="content-section">
           <h2 class="section-heading">contact</h2>
           <p class="section-description">Fan? Drop a note!</p>
+
+          <div class="row contact-content clearfix">
+            <div class="col col-half contact-info">
+              <p>
+                <i class="ti-location-pin"></i>
+                Vietnam, Ho Chi Minh City
+              </p>
+              <p>
+                <i class="ti-mobile"></i>
+                +84 123 456 789
+              </p>
+              <p>
+                <i class="ti-email"></i>
+                iamhoangkhang@icloud.com
+              </p>
+            </div>
+            <div class="col col-half contact-messenge">
+              <form action="" class="contact-form">
+                <div class="row">
+                  <div class="col col-half">
+                    <input
+                      class="form-control"
+                      type="text"
+                      placeholder="Your name"
+                    />
+                  </div>
+
+                  <div class="col col-half">
+                    <input
+                      class="form-control"
+                      type="email"
+                      placeholder="Email"
+                    />
+                  </div>
+                </div>
+
+                <div class="row">
+                  <div class="col col-full">
+                    <textarea
+                      class="form-control"
+                      name=""
+                      id=""
+                      cols="30"
+                      rows="10"
+                      placeholder="Message"
+                    ></textarea>
+                  </div>
+                </div>
+
+                <div class="row col col-full">
+                  <button class="btn btn-send">Send</button>
+                </div>
+              </form>
+            </div>
+          </div>
         </div>
       </div>
 
-      <footer id="footer"></footer>
+      <div class="map-section">
+        <img src="./assets//imgs//map-hcm.jpg" alt="" />
+      </div>
+
+      <footer id="footer">
+        <div class="socials-list">
+          <a href=""><i class="ti-facebook"></i></a>
+          <a href=""><i class="ti-instagram"></i></a>
+          <a href=""><i class="ti-pinterest"></i></a>
+          <a href=""><i class="ti-twitter-alt"></i></a>
+          <a href=""><i class="ti-youtube"></i></a>
+          <a href=""><i class="ti-linkedin"></i></a>
+        </div>
+        <p class="copyright">
+          &copy; 2024 The Band. All rights reserved. Designed by Hoàng Khang
+        </p>
+      </footer>
     </div>
 
     <div class="modal">
@@ -225,7 +296,7 @@
             class="modal-lable"
             style="display: flex; align-items: center"
           >
-            <i class="ti-twitter-alt" style=""></i>
+            <i class="ti-twitter-alt"></i>
             If you are a fan Jack 5 củ, please check this box
             <input type="checkbox" style="margin-left: 4px" />
           </label>
@@ -293,7 +364,6 @@
       }
 
       setInterval(changeSliderContent, 5000); // thay đổi nội dung sau mỗi 5 giây
-
 
       // Nhấn vào vùng khác ngoài modal sẽ đóng modal
       modal.addEventListener("click", function (event) {
